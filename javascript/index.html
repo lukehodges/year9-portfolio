@@ -10,11 +10,30 @@ $(document).ready(function(){
     $(this).css("background-color", "pink");
   });
 });
+var toggled=true
+function off(img){
+    if(toggled){
+        toggled=false;
+        img.src="https://th.bing.com/th/id/R6f55d1e32625284b9f55720af8154eeb?rik=QRpmfwofP%2bUxgw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-P1lQtQ54rLY%2fUTh-ixH2K7I%2fAAAAAAAAjj4%2fB8vh1pB3cqw%2fs1600%2fInkscape_Lightbulb_by_GommaVulcanizzata.png&ehk=VAt4oHcMvDdHgqk6MBPcO2f634VTgR8xtndcHqU0mnA%3d&risl=&pid=ImgRaw"
+    }
+    else{
+        toggled=true;
+        img.src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1"
+    }
+    
+}
 </script>
+<style>
+    .bulb{
+        width:30px;
+        height:400px
+    }
+</style>
 </head>
 <body>
 
 <p>Hover the mouse pointer over this paragraph.</p>
-
+<img src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1" alt="" class="lightbulbs" onclick="off(this);" class="bulb">
+<img src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1" alt="" class="lightbulbs" onclick="off(this);" class="bulb">
 </body>
 </html>
