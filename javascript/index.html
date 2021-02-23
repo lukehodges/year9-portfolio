@@ -22,18 +22,41 @@ function off(img){
     }
     
 }
+function qrcode(button){
+    var link = button.parentElement.querySelector("#forum").link.value
+    const url="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ link
+    console.log(link)
+    $.ajax({
+        url:url,
+        type:"GET",
+        success:function(results){
+            button.parentElement.querySelector("#qrcode").src=url
+        },
+        error:function(error){
+            console.error(`Error! ${error}`)
+        }
+    }
+    )
+}
+
 </script>
 <style>
     .bulb{
         width:30px;
-        height:400px
+        height:40px
     }
 </style>
 </head>
 <body>
 
 <p>Hover the mouse pointer over this paragraph.</p>
-<img src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1" alt="" class="lightbulbs" onclick="off(this);" class="bulb">
-<img src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1" alt="" class="lightbulbs" onclick="off(this);" class="bulb">
+<img src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1" alt="" onclick="off(this);" class="bulb">
+<img src="https://th.bing.com/th/id/OIP.p1ceSuhbsfCnCibSZ9Td0QHaNB?pid=ImgDet&rs=1" alt="" onclick="off(this);" class="bulb">
+
+<form id="forum">
+    <input type="text" value="link_in_here.com" name="link">
+</form>
+    <button onclick="qrcode(this);">generate</button>
+    <img src="" alt="" id="qrcode">
 </body>
 </html>
