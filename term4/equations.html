@@ -1,0 +1,42 @@
+<!doctype html>
+
+<head>
+
+<script>
+function add(num1,num2){
+return num1+num2p;
+}
+function average(lst){
+const len = lst.length
+var sum = lst.reduce(function(a, b){
+        return a + b;
+    }, 0);
+return sum/len
+}
+function toSeconds(hours,minutes=0){
+return (hours*60*60)+minutes*60;
+}
+function toFeet(m){return m*3.28}
+function toKM(m){return m*1.6.1}
+function toFarenheight(c){return (c*9/5)+32}
+function toCelcius(f){return (f-32/)*5/9 }//(1Â°F âˆ’ 32) Ã— 5/9 = -17.22Â°C
+console.log(average([1,2,3,4,1,3]));
+function convertmilestokm()
+{
+    var n = Number(prompt("enter the distance in miles"));
+    window.alert("that's " + 1.61*n + " kilometers");
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<button onclick="convertmilestokm()">convert miles to km</button>
+<button onclick="toSeconds()">convert hours to seconds</button>
+</body>
+
+</html>
