@@ -36,7 +36,12 @@ function convertmilestokm()
 <body>
 
 <button onclick="convertmilestokm()">convert miles to km</button>
-<button onclick="toSeconds()">convert hours to seconds</button>
+<button onclick="function(){
+                 y = Number(prompt('enter hours'));
+                 x = Number(prompt('enter minutes'));
+                 z = toSeconds(y,x);
+                 window.alert('that is ' +z+"seconds")}"
+                                                     >convert hours to seconds</button>
 </body>
 
 </html>
